@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:KeyboardMaster"
         mc:Ignorable="d"
         Title="Keyboard Master"
-        Height="740"
-        Width="1200"
+        Height="540"
+        Width="740"
         WindowStyle="None"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
@@ -44,15 +44,15 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="25"/>
+                </Grid.ColumnDefinitions>
 
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition />
-                <ColumnDefinition Width="25"/>
-                <ColumnDefinition Width="25"/>
-                <ColumnDefinition Width="25"/>
-            </Grid.ColumnDefinitions>
-
-            <Button
+                <Button
                     x:Name="btnClose"
                     FontWeight="Heavy"
                     BorderThickness="0"
@@ -63,33 +63,33 @@
                     Grid.Row="0" 
                     Click="btnClose_Click">
 
-                <Button.Style>
-                    <Style TargetType="Button">
-                        <Setter Property="Background" Value="#FFFF745E"/>
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="#FFFB482B"/>
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </Button.Style>
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="#FFFF745E"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#FFFB482B"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
 
-                <Button.Template>
-                    <ControlTemplate TargetType="Button">
-                        <Border 
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border 
                             Width="20"
                             Height="20" 
                             CornerRadius="9"
                             Background="{TemplateBinding Background}">
-                            <ContentPresenter 
+                                <ContentPresenter 
                                 VerticalAlignment="Center" 
                                 HorizontalAlignment="Center"/>
-                        </Border>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
 
-            <Button
+                <Button
                     x:Name="btnMinimize"
                     BorderThickness="0"
                     Content="-"
@@ -101,31 +101,33 @@
                     Grid.Row="0" 
                     Click="btnMinimize_Click">
 
-                <Button.Style>
-                    <Style TargetType="Button">
-                        <Setter Property="Background" Value="#FF988BE6"/>
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="#FF6953EC"/>
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </Button.Style>
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="#FF988BE6"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#FF6953EC"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
 
-                <Button.Template>
-                    <ControlTemplate TargetType="Button">
-                        <Border 
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border 
                             Width="20"
                             Height="20" 
                             CornerRadius="9"
                             Background="{TemplateBinding Background}">
-                            <ContentPresenter 
+                                <ContentPresenter 
                                 VerticalAlignment="Center" 
                                 HorizontalAlignment="Center"/>
-                        </Border>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
 
             <TextBlock
                 Text="KEYBOARD MASTER"
@@ -150,7 +152,7 @@
                         <Setter Property="Background" Value="#FF6D5EC8"/>
                         <Style.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="#FF5F45FF"/>
+                                <Setter Property="Background" Value="#FF705AF7"/>
                             </Trigger>
                         </Style.Triggers>
                     </Style>
@@ -171,41 +173,36 @@
                 </Button.Template>
             </Button>
 
-            <Label
-                Grid.Row="2"
-                Content="Scenarios"
-                HorizontalContentAlignment="Center"
-                VerticalContentAlignment="Bottom"
-                Foreground="#FF03095B" 
-                FontSize="25"
-                FontWeight="ExtraLight"
-            />
-
             <Grid Grid.Row="3"
-                  Margin="10"
-                  >
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
+                  Margin="10">
 
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
+                <Label
+                    Content="Choose scenario to train"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    FontSize="23"
+                    Foreground="#FF03095B" 
+                    FontWeight="ExtraLight"                    
+                    />
 
-                <Grid>
+                <ListBox Name="myListBox" HorizontalAlignment="Center" SelectionMode="Extended" 
+                Width="200" Height="40" Background="#FF6D5EC8" 
+                IsSynchronizedWithCurrentItem="true">
+                </ListBox>
 
+                <Label
+                    Content="----"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    FontSize="23"
+                    Foreground="#FF03095B" 
+                    FontWeight="ExtraLight"                    
+                    />
 
-                </Grid>
-
+                <!-- dodanie list box i labelki z opsiem-->
             </Grid>
+            
+            
         </Grid>
     </Border>
 </Window>
