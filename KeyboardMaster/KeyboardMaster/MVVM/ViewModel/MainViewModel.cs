@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace KeyboardMaster.MVVM.ViewModel
 {
-    class MainViewModel
+    class MainViewModel : BaseViewModel
     {
+            
     }
 }
