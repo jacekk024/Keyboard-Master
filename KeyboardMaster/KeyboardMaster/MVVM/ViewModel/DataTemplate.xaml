@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:view="clr-namespace:KeyboardMaster.MVVM.View"
+                    xmlns:vm="clr-namespace:KeyboardMaster.MVVM.ViewModel">
+
+    <DataTemplate DataType="x:Type vm:TestViewModel">
+        <view:TestView/>
+    </DataTemplate>
+
+
+</ResourceDictionary>

@@ -18,7 +18,7 @@
     <Border 
             CornerRadius="50"
             BorderThickness="5">
-
+        <!-- Border gradient color -->
         <Border.BorderBrush>
             <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                 <GradientStop Color="#462AD8" Offset="0"/>
@@ -27,7 +27,8 @@
 
             </LinearGradientBrush>
         </Border.BorderBrush>
-
+        
+        <!-- Background gradient color -->
         <Border.Background>
             <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
                 <GradientStop Color="#FF312679" Offset="0"/>
