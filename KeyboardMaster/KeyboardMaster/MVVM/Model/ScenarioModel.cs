@@ -15,9 +15,9 @@ namespace KeyboardMaster.MVVM.Model
 
         public void GenerateRandomScenario() 
         {
+            // w zależnosci od scenariusza losujemy 40 znakow na linie + 9 spacji pomiedzy 4 znakami
         
-        
-        
+            
         
         }
     }

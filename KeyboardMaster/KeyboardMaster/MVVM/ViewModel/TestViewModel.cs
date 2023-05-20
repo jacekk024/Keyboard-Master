@@ -8,5 +8,8 @@ namespace KeyboardMaster.MVVM.ViewModel
 {
     class TestViewModel
     {
+
+
+
     }
 }
