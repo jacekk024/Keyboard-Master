@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace KeyboardMaster.MVVM.ViewModel
+namespace KeyboardMaster.MVVM.Core
 {
     class RelayCommand : ICommand
     {

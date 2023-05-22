@@ -40,5 +40,6 @@ namespace KeyboardMaster.MVVM.View
         {
             Application.Current.Shutdown();
         }
+
     }
 }

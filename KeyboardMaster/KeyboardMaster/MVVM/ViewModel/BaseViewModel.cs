@@ -11,7 +11,7 @@ namespace KeyboardMaster.MVVM.ViewModel
     {
         public event PropertyChangedEventHandler? PropertyChanged;
 
-        protected virtual void OnPropertyChanged(string propertyName)
+        protected void OnPropertyChanged(string propertyName)
         {
             if(PropertyChanged != null) 
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));

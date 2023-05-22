@@ -128,19 +128,72 @@
                 </Button>
             </Grid>
 
-
-            <Grid>
-                <Label
-                    VerticalContentAlignment="Center"
-                    HorizontalContentAlignment="Center"
-                    FontSize="15"
-                    Content="Dupa"
-                    Foreground="#FF03095B">
+            <Label
+                VerticalContentAlignment="Center"
+                HorizontalContentAlignment="Center"
+                FontSize="15"
+                Target="{Binding}"
+                Foreground="#FF03095B"
+                Grid.Row ="0">
                     
-                </Label>
-            </Grid>
+            </Label>
 
+            <Label
+                VerticalContentAlignment="Center"
+                HorizontalContentAlignment="Center"
+                FontSize="15"
+                Target="{Binding}"
+                Foreground="#FF03095B"
+                Grid.Row ="2">
 
+            </Label>
+
+            <TextBox
+                VerticalContentAlignment="Center"
+                HorizontalContentAlignment="Center"
+                FontSize="15"
+                Background="Transparent"
+                Foreground="Black"
+                Grid.Row ="3">
+            </TextBox>
+
+            <Label
+                VerticalContentAlignment="Center"
+                HorizontalContentAlignment="Center"
+                FontSize="15"
+                Target="{Binding}"
+                Foreground="#FF03095B"
+                Grid.Row ="4">
+
+            </Label>
+
+            <TextBox
+                VerticalContentAlignment="Center"
+                HorizontalContentAlignment="Center"
+                FontSize="15"
+                Background="Transparent"
+                Foreground="Black"
+                Grid.Row ="5">
+            </TextBox>
+
+            <Label
+                VerticalContentAlignment="Center"
+                HorizontalContentAlignment="Center"
+                FontSize="15"
+                Target="{Binding}"
+                Foreground="#FF03095B"
+                Grid.Row ="6">
+
+            </Label>
+
+            <TextBox
+                VerticalContentAlignment="Center"
+                HorizontalContentAlignment="Center"
+                FontSize="15"
+                Background="Transparent"
+                Foreground="Black"
+                Grid.Row ="7">
+            </TextBox>
 
         </Grid>
     </Border>

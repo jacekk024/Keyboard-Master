@@ -37,8 +37,45 @@
             </Grid.RowDefinitions>
 
 
-            
-            
+            <Button
+                    x:Name="btnBack"
+                    FontWeight="Heavy"
+                    BorderThickness="0"
+                    Content = "&lt;"
+                    FontSize="19"
+                    Cursor="Hand"
+                    Grid.Column="2"
+                    Grid.Row="0" 
+                    Click="btnClose_Click"
+                    HorizontalAlignment="Left"
+                    Margin="30,0,0,0">
+
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#FF988BE6"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#FF6953EC"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border
+                            Width="25"
+                            Height="25" 
+                            CornerRadius="15"
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter 
+                                VerticalAlignment="Center" 
+                                HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
@@ -46,7 +83,7 @@
                     <ColumnDefinition Width="25"/>
                     <ColumnDefinition Width="25"/>
                 </Grid.ColumnDefinitions>
-
+ 
                 <Button
                     x:Name="btnClose"
                     FontWeight="Heavy"
@@ -121,6 +158,11 @@
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
+                
+                
+                
+                
+                
             </Grid>
 
             

@@ -146,8 +146,8 @@
                 Foreground="#FF03095B" 
                 FontWeight="ExtraLight"
                 FontSize="22"
-                Grid.Row="2"
-                >
+                Grid.Row="2">
+                
                 <Button.Style>
                     <Style TargetType="Button">
                         <Setter Property="Background" Value="#FF6D5EC8"/>
