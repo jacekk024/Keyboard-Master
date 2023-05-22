@@ -18,7 +18,7 @@ namespace KeyboardMaster.MVVM.View
     /// <summary>
     /// Interaction logic for ResultView.xaml
     /// </summary>
-    public partial class ResultView : Page
+    public partial class ResultView : UserControl
     {
         public ResultView()
         {

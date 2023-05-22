@@ -18,28 +18,11 @@ namespace KeyboardMaster.MVVM.View
     /// <summary>
     /// Interaction logic for TestView.xaml
     /// </summary>
-    public partial class TestView : Page
+    public partial class TestView : UserControl
     {
         public TestView()
         {
             InitializeComponent();
         }
-
-        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            if (e.LeftButton == MouseButtonState.Pressed) ;
-               // DragMove();
-        }
-
-        private void btnMinimize_Click(object sender, RoutedEventArgs e)
-        {
-            //WindowState = WindowState.Minimized;
-        }
-
-        private void btnClose_Click(object sender, RoutedEventArgs e)
-        {
-            Application.Current.Shutdown();
-        }
-
     }
 }

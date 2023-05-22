@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace KeyboardMaster.MVVM.Model
 {
-    class ScenarioModel
+    class PageModel
     {
         public IEnumerable<string>? ScenarioText { get; set; }
         public int Scenario { get; set; }
