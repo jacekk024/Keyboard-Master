@@ -19,8 +19,7 @@
     <Window.DataContext>
         <vm:MainViewModel/>
     </Window.DataContext>
-    
-    
+
     <Border 
             CornerRadius="50"
             BorderThickness="5">
@@ -30,7 +29,6 @@
                 <GradientStop Color="#462AD8" Offset="0"/>
                 <GradientStop Color="#FF9528F3" Offset="0"/>
                 <GradientStop Color="#FFAD4BC5" Offset="0"/>
-
             </LinearGradientBrush>
         </Border.BorderBrush>
         
@@ -46,8 +44,17 @@
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="30"/>
-                <RowDefinition Height="100"/>
-                <RowDefinition Height="200"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
@@ -134,24 +141,24 @@
                     </Button.Template>
                 </Button>
             </Grid>
-
-
+      
             <TextBlock
                 Text="KEYBOARD MASTER"
                 Grid.Row="1"
                 HorizontalAlignment="Center"
-                FontSize="55"
+                FontSize="20"
                 FontWeight="ExtraLight"
-                Foreground="#FF03095B"    
+                Foreground="#FF060A48"    
             />
 
             <Button
                 Width="100"
                 Height="30"
                 Content="Start"
-                Foreground="#FF03095B" 
+                Foreground="#FF060A48" 
                 FontWeight="ExtraLight"
-                FontSize="22"
+                FontSize="12"
+                
                 Grid.Row="2">
                 
                 <Button.Style>
@@ -168,8 +175,8 @@
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border 
-                            Width="100"
-                            Height="30" 
+                            Width="80"
+                            Height="20" 
                             CornerRadius="9"
                             Background="{TemplateBinding Background}">
                             <ContentPresenter 
@@ -180,36 +187,92 @@
                 </Button.Template>
             </Button>
 
-            <Grid Grid.Row="3"
-                  Margin="10">
+            <ListBox 
+                ItemsPanel="{Binding}"
+                Grid.Row="3"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                Foreground="#FF060A48">
 
-                <Label
-                    Content="Choose scenario to train"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Top"
-                    FontSize="23"
-                    Foreground="#FF03095B" 
-                    FontWeight="ExtraLight"                    
-                    />
-
-                <ListBox Name="myListBox" HorizontalAlignment="Center" SelectionMode="Extended" 
-                Width="200" Height="40" Background="#FF6D5EC8" 
-                IsSynchronizedWithCurrentItem="true">
-                </ListBox>
-
-                <Label
-                    Content="----"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Bottom"
-                    FontSize="23"
-                    Foreground="#FF03095B" 
-                    FontWeight="ExtraLight"                    
-                    />
-
-                <!-- dodanie list box i labelki z opsiem-->
-            </Grid>
+            </ListBox>
+                    
+            <TextBlock
+                Text="{Binding}"
+                Grid.Row="4"
+                HorizontalAlignment="Center"
+                FontSize="15"
+                FontWeight="ExtraLight"
+                Foreground="#FF060A48"    
+            />
             
-            
+            <TextBlock
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontSize="15"
+                Text="{Binding}"
+                Foreground="#FF060A48"
+                Grid.Row ="5"
+                >
+            </TextBlock>
+
+            <TextBox
+                VerticalContentAlignment="Center"
+                HorizontalContentAlignment="Center"
+                FontSize="15"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                Foreground="Black"
+                Grid.Row ="6">
+            </TextBox>
+
+            <TextBlock
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontSize="15"
+                Text="{Binding}"
+                Foreground="#FF060A48"
+                Grid.Row ="7">
+            </TextBlock>
+
+            <TextBox
+                VerticalContentAlignment="Center"
+                HorizontalContentAlignment="Center"
+                FontSize="15"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                Foreground="Black"
+                Grid.Row ="8">
+            </TextBox>
+
+            <TextBlock
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontSize="15"
+                Text="{Binding}"
+                Foreground="#FF060A48"
+                Grid.Row ="9">
+            </TextBlock>
+
+            <TextBox
+                VerticalContentAlignment="Center"
+                HorizontalContentAlignment="Center"
+                FontSize="15"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                Foreground="Black"
+                Grid.Row ="10">
+            </TextBox>
+
+            <TextBlock
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontSize="15"
+                Text="{Binding}"
+                Foreground="#FF060A48"
+                Grid.Row ="11">
+            </TextBlock>
+
+
         </Grid>
     </Border>
 </Window>
