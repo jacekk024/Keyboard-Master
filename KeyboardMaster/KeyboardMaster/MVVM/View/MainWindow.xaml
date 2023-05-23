@@ -271,8 +271,6 @@
                 Foreground="#FF060A48"
                 Grid.Row ="11">
             </TextBlock>
-
-
         </Grid>
     </Border>
 </Window>
