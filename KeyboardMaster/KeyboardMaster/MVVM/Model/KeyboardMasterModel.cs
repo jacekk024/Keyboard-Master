@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Formats.Asn1.AsnWriter;
 
 namespace KeyboardMaster.MVVM.Model
 {
@@ -13,6 +14,7 @@ namespace KeyboardMaster.MVVM.Model
         public int Scenario { get; set; }
         public Stopwatch? StopWatch { get; set; }
         public double Result { get; set; }
+        public int Score { get; set; }
 
         public KeyboardMasterModel(int scenarrio)
         {
@@ -20,7 +22,7 @@ namespace KeyboardMaster.MVVM.Model
             StopWatch = new Stopwatch();
             Scenario = scenarrio;
         }
-        public List<int> GenerateRandomScenario()
+        public List<int> GenerateScenario()
         {
             // w zależnosci od scenariusza losujemy 40 znakow na linie + 9 spacji pomiedzy 4 znakami
 
@@ -53,6 +55,21 @@ namespace KeyboardMaster.MVVM.Model
 
         }
 
+        public bool CheckAnswer(string answer)
+        {
+            // Compare the answer with the current scenario
+            // and update the score accordingly
+            // Implement your logic here to check the answer
+        }
 
+        public int GetScore()
+        {
+            return score;
+        }
+
+        public void ResetScore()
+        {
+            score = 0;
+        }
     }
 }
