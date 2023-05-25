@@ -46,11 +46,9 @@ namespace KeyboardMaster.MVVM.ViewModel
 
         public void StartScenario() 
         {
-        
+            Timer?.Start();
         
         }
-
-         
-
+        
     }
 }
