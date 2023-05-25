@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using static System.Formats.Asn1.AsnWriter;
 
 namespace KeyboardMaster.MVVM.Model
@@ -12,47 +9,27 @@ namespace KeyboardMaster.MVVM.Model
     {
         public List<string>? ScenarioText { get; set; }
         public int Scenario { get; set; }
-        public Stopwatch? StopWatch { get; set; }
-        public double Result { get; set; }
+        public double Result = 0;
         public int Score { get; set; }
 
-        public KeyboardMasterModel(int scenarrio)
+        public string Answer { get; set; }  
+        public KeyboardMasterModel()
         {
             ScenarioText = new List<string>();
-            StopWatch = new Stopwatch();
-            Scenario = scenarrio;
+            Scenario = 1;
         }
-        public List<int> GenerateScenario()
+
+
+        public void GenerateScenario()
         {
-            // w zależnosci od scenariusza losujemy 40 znakow na linie + 9 spacji pomiedzy 4 znakami
+            // Generate a new scenario with random letters
+            currentScenario = GenerateRandomLetters();
+        }
 
-            Random random = new Random();
-
-            switch (Scenario)
-            {
-                case 1:
-
-                    break;
-                case 2:
-
-                    break;
-
-                case 3:
-                    break;
-                case 4:
-                    break;
-
-                default:
-                    break;
-
-
-
-
-            }
-
-
-
-
+        private string GenerateRandomLetters()
+        {
+            // Generate and return a random sequence of letters for the scenario
+            // Implement your logic here to generate the letters
         }
 
         public bool CheckAnswer(string answer)
