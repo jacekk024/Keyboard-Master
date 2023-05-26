@@ -158,7 +158,7 @@
                 Foreground="#FF060A48" 
                 FontWeight="ExtraLight"
                 FontSize="12"
-                
+                Command="{Binding StartScenarioCommand}"       
                 Grid.Row="2">
                 
                 <Button.Style>
@@ -196,8 +196,8 @@
 
             </ListBox>
                     
-            <TextBlock
-                Text="{Binding}"
+            <TextBlock  
+                Text="{Binding Scenario}"
                 Grid.Row="4"
                 HorizontalAlignment="Center"
                 FontSize="15"

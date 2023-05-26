@@ -1,4 +1,5 @@
-﻿using KeyboardMaster.MVVM.Model;
+﻿using KeyboardMaster.MVVM.Core;
+using KeyboardMaster.MVVM.Model;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -15,15 +16,21 @@ namespace KeyboardMaster.MVVM.ViewModel
         private KeyboardMasterModel? Model { get; set; }
         private Stopwatch? Timer { get; set; }
 
+        private string ScenarioText { get; set; }
 
 
         public MainViewModel() 
         {
             Model = new KeyboardMasterModel();
             Timer = new Stopwatch();
+            ScenarioText = "";
 
+
+            StartScenarioCommand = new RelayCommand(StartScenario);
 
         }
+
+        public ICommand StartScenarioCommand;
 
         public string Answer 
         {
@@ -43,12 +50,38 @@ namespace KeyboardMaster.MVVM.ViewModel
             }
         }
 
+        public string Scenario
+        {
+            get => ScenarioText;
+            set
+            {
+                OnPropertyChanged(nameof(Scenario));
+            }
+        }
+
 
         public void StartScenario() 
         {
-            Timer?.Start();
-        
+            //Timer?.Start();
+            UpdateScenario(Model.Scenario);
+            
         }
+
+        private void UpdateScenario(int scenario) 
+        {
+            switch(scenario)              
+            {
+                case 1:
+                    ScenarioText = "litery j k l";
+                break;
+
+                default:
+                    
+                break;
+            
+            }
         
+     
+        }      
     }
 }

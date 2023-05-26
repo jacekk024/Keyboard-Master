@@ -9,6 +9,7 @@ class KeyboardMasterModel
 {
     public List<string>? ScenarioText { get; set; }
     public int Scenario { get; set; }
+    
     public double Result = 0;
     public int Score { get; set; }
 
