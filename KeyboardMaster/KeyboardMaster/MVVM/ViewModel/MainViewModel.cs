@@ -75,8 +75,29 @@ namespace KeyboardMaster.MVVM.ViewModel
             switch(scenario)              
             {
                 case 1:
-                    Scenario = "litery j k l";
-                break;
+                    Scenario = "letters j k l";
+                    break;
+                case 2:
+                    Scenario = "letters a s d f";
+                    break;
+                case 3:
+                    Scenario = "letters j k l";
+                    break;
+                case 4:
+                    Scenario = "letters j k l";
+                    break;
+                case 5:
+                    Scenario = "letters j k l";
+                    break;
+                case 6:
+                    Scenario = "letters j k l";
+                    break;
+                case 7:
+                    Scenario = "letters j k l";
+                    break;
+                case 8:
+                    Scenario = "letters j k l";
+                    break;
 
                 default:
                     
