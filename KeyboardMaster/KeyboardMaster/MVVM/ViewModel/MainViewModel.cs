@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 
 namespace KeyboardMaster.MVVM.ViewModel
@@ -28,7 +29,7 @@ namespace KeyboardMaster.MVVM.ViewModel
 
         }
 
-        public ICommand StartScenarioCommand;
+        public ICommand StartScenarioCommand { get; }
 
         public string Answer 
         {
@@ -53,6 +54,7 @@ namespace KeyboardMaster.MVVM.ViewModel
             get => ScenarioText; 
             set
             {
+                ScenarioText = value;
                 OnPropertyChanged(nameof(Scenario));
             }
         }
@@ -60,7 +62,9 @@ namespace KeyboardMaster.MVVM.ViewModel
 
         public void StartScenario() 
         {
-            UpdateScenario(1);
+            //UpdateScenario(1);
+            Scenario = "litery j k l";
+
             //Timer?.Start();
             // Task.Run(() => UpdateScenario(1));
 
@@ -71,7 +75,7 @@ namespace KeyboardMaster.MVVM.ViewModel
             switch(scenario)              
             {
                 case 1:
-                    Scenario = "litery j k l";
+                    ScenarioText = "litery j k l";
                 break;
 
                 default:
@@ -79,6 +83,10 @@ namespace KeyboardMaster.MVVM.ViewModel
                 break;
             
             }       
-        }      
+        }
+
+
+
+
     }
 }
