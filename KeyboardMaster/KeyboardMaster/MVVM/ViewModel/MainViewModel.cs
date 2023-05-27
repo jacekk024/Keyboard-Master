@@ -2,6 +2,7 @@
 using KeyboardMaster.MVVM.Model;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -18,7 +19,6 @@ namespace KeyboardMaster.MVVM.ViewModel
         private Stopwatch? Timer { get; set; }
 
         private string ScenarioText { get; set; }
-
 
         public MainViewModel() 
         {
@@ -59,13 +59,12 @@ namespace KeyboardMaster.MVVM.ViewModel
             }
         }
 
-
         public void StartScenario() 
         {
             //UpdateScenario(1);
             //Scenario = "litery j k l";
 
-            //Timer?.Start();
+             Timer?.Start();
              Task.Run(() => UpdateScenario(1));
 
         }
@@ -76,27 +75,30 @@ namespace KeyboardMaster.MVVM.ViewModel
             {
                 case 1:
                     Scenario = "letters j k l";
+
+                    
+
                     break;
                 case 2:
                     Scenario = "letters a s d f";
                     break;
                 case 3:
-                    Scenario = "letters j k l";
+                    Scenario = "letters j k l i";
                     break;
                 case 4:
-                    Scenario = "letters j k l";
+                    Scenario = "letters a s d f e";
                     break;
                 case 5:
-                    Scenario = "letters j k l";
+                    Scenario = "letters j k l u i";
                     break;
                 case 6:
-                    Scenario = "letters j k l";
+                    Scenario = "letters s d f e u j k l";
                     break;
                 case 7:
-                    Scenario = "letters j k l";
+                    Scenario = "letters a s d f e r";
                     break;
                 case 8:
-                    Scenario = "letters j k l";
+                    Scenario = "letters j k l u i o";
                     break;
 
                 default:
