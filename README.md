@@ -9,6 +9,8 @@
 * [Results](#results)
 
 ## General Info
+
+Project in progress
 ![](https://cdn.dribbble.com/users/1791559/screenshots/4465351/media/af9126c676894e277b22d4690eceb5b1.gif)
 ## Tools
 * Visual Studio 
