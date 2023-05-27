@@ -25,46 +25,53 @@ class KeyboardMasterModel
 
     public string GenerateScenario(int scenario)
     {
-        Random rnd;
+        Random rnd = new();
+        StringBuilder sb = new();
+
+        string chars = "";
+
         switch (scenario)
         {
             case 1:
-                const string chars = "jkl";
+                chars = "jkl";
 
-                rnd = new Random();
-                StringBuilder sb = new();
+            break;
                 
-                for()
 
-                return new string(Enumerable.Repeat(chars, 4)
-                .Select(s => s[rnd.Next(s.Length)]).ToArray());
+              
 
             case 2:
-                const string chars = "asdf";
-                break;
+                chars = "asdf";
+            break;
             case 3:
-                Scenario = "letters j k l i";
+                chars = "letters j k l i";
                 break;
             case 4:
-                Scenario = "letters a s d f e";
+                chars = "letters a s d f e";
                 break;
             case 5:
-                Scenario = "letters j k l u i";
+                chars = "letters j k l u i";
                 break;
             case 6:
-                Scenario = "letters s d f e u j k l";
+                chars = "letters s d f e u j k l";
                 break;
             case 7:
-                Scenario = "letters a s d f e r";
+                chars = "letters a s d f e r";
                 break;
             case 8:
-                Scenario = "letters j k l u i o";
+                chars = "letters j k l u i o";
                 break;
 
             default:
                 return "";
 
         }
+
+
+       
+
+            return new string(Enumerable.Repeat(chars, 4)
+            .Select(s => s[rnd.Next(s.Length)]).ToArray());
 
     }
 
