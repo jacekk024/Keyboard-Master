@@ -23,8 +23,6 @@ namespace KeyboardMaster.MVVM.ViewModel
         {
             Model = new KeyboardMasterModel();
             Timer = new Stopwatch();
-            ScenarioText = "";
-
 
             StartScenarioCommand = new RelayCommand(StartScenario);
 
@@ -52,7 +50,7 @@ namespace KeyboardMaster.MVVM.ViewModel
 
         public string Scenario
         {
-            get => ScenarioText;
+            get => ScenarioText; 
             set
             {
                 OnPropertyChanged(nameof(Scenario));
@@ -63,7 +61,7 @@ namespace KeyboardMaster.MVVM.ViewModel
         public void StartScenario() 
         {
             //Timer?.Start();
-            UpdateScenario(Model.Scenario);
+            Task.Run(() => UpdateScenario(Model.Scenario));
             
         }
 
@@ -79,9 +77,7 @@ namespace KeyboardMaster.MVVM.ViewModel
                     
                 break;
             
-            }
-        
-     
+            }       
         }      
     }
 }
