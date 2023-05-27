@@ -9,7 +9,7 @@
 * [Results](#results)
 
 ## General Info
-<img src = "![38fb009c3c46bdccd45bbf1d2514f440](https://github.com/jacekk024/Keyboard-Master/assets/45696277/ef64e6ac-73a8-4e50-8db9-b76d00e9adc1)" alt= "working">
+![](https://cdn.dribbble.com/users/1791559/screenshots/4465351/media/af9126c676894e277b22d4690eceb5b1.gif)
 ## Tools
 * Visual Studio 
 ## Technologies
