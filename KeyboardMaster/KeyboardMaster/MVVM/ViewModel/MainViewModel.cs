@@ -20,11 +20,16 @@ namespace KeyboardMaster.MVVM.ViewModel
 
         private string ScenarioText { get; set; }
 
+
+        private string lineOne { get; set; }
+
+
         public MainViewModel() 
         {
             Model = new KeyboardMasterModel();
             Timer = new Stopwatch();
             ScenarioText = "";
+            lineOne = "";
             StartScenarioCommand = new RelayCommand(StartScenario);
 
         }
@@ -59,6 +64,17 @@ namespace KeyboardMaster.MVVM.ViewModel
             }
         }
 
+        public string LineOne
+        {
+            get => lineOne;
+            set
+            {
+                lineOne = value;
+                OnPropertyChanged(nameof(LineOne));
+            }
+        }
+
+
         public void StartScenario() 
         {
             //UpdateScenario(1);
@@ -76,7 +92,7 @@ namespace KeyboardMaster.MVVM.ViewModel
                 case 1:
                     Scenario = "letters j k l";
 
-                    
+                    LineOne = Model.GenerateScenario(1);
 
                     break;
                 case 2:

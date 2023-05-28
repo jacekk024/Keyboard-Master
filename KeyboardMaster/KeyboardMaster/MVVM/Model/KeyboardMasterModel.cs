@@ -34,12 +34,7 @@ class KeyboardMasterModel
         {
             case 1:
                 chars = "jkl";
-
             break;
-                
-
-              
-
             case 2:
                 chars = "asdf";
             break;
@@ -67,11 +62,14 @@ class KeyboardMasterModel
 
         }
 
-
+        for(int i = 0; i < 10; i++) 
+        {
+            sb.Append(new string(Enumerable.Repeat(chars, 4)
+            .Select(s => s[rnd.Next(s.Length)]).ToArray()) + " ");
+            
+        }
        
-
-            return new string(Enumerable.Repeat(chars, 4)
-            .Select(s => s[rnd.Next(s.Length)]).ToArray());
+        return sb.ToString();
 
     }
 
