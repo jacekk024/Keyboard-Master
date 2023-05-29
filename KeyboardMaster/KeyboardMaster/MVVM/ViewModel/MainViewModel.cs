@@ -22,6 +22,9 @@ namespace KeyboardMaster.MVVM.ViewModel
 
 
         private string lineOne { get; set; }
+        private string lineTwo { get; set; }
+        private string lineThree { get; set; }
+        private string lineFour { get; set; }
 
 
         public MainViewModel() 
@@ -30,6 +33,10 @@ namespace KeyboardMaster.MVVM.ViewModel
             Timer = new Stopwatch();
             ScenarioText = "";
             lineOne = "";
+            lineTwo = "";
+            lineThree = "";
+            lineFour = "";
+
             StartScenarioCommand = new RelayCommand(StartScenario);
 
         }
@@ -74,15 +81,41 @@ namespace KeyboardMaster.MVVM.ViewModel
             }
         }
 
+        public string LineTwo
+        {
+            get => lineTwo;
+            set
+            {
+                lineOne = value;
+                OnPropertyChanged(nameof(LineTwo));
+            }
+        }
+
+        public string LineThree
+        {
+            get => lineThree;
+            set
+            {
+                lineOne = value;
+                OnPropertyChanged(nameof(LineThree));
+            }
+        }
+
+        public string LineFour
+        {
+            get => lineFour;
+            set
+            {
+                lineOne = value;
+                OnPropertyChanged(nameof(LineFour));
+            }
+        }
 
         public void StartScenario() 
         {
-            //UpdateScenario(1);
-            //Scenario = "litery j k l";
 
              Timer?.Start();
-             Task.Run(() => UpdateScenario(1));
-
+             Task.Run(() => UpdateScenario(2));
         }
 
         private void UpdateScenario(int scenario) 
@@ -91,12 +124,14 @@ namespace KeyboardMaster.MVVM.ViewModel
             {
                 case 1:
                     Scenario = "letters j k l";
-
-                    LineOne = Model.GenerateScenario(1);
+                    Model.Scenario = 1;
 
                     break;
                 case 2:
                     Scenario = "letters a s d f";
+                    Model.Scenario = 2;
+
+
                     break;
                 case 3:
                     Scenario = "letters j k l i";
@@ -121,7 +156,13 @@ namespace KeyboardMaster.MVVM.ViewModel
                     
                 break;
             
-            }       
+            }
+
+            LineOne = Model.GenerateScenario(scenario);
+            LineTwo = Model.GenerateScenario(scenario);
+            LineThree = Model.GenerateScenario(scenario);
+            LineFour = Model.GenerateScenario(scenario);
+
         }
 
 
