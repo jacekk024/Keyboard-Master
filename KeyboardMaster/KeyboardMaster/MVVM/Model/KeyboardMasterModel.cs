@@ -12,7 +12,7 @@ class KeyboardMasterModel
     public List<string>? ScenarioText { get; set; }
     public int Scenario { get; set; }
     
-    public double Result = 0;
+    public string Result { get; set; }
     public int Score { get; set; }
 
     public string Answer { get; set; }  
@@ -20,6 +20,7 @@ class KeyboardMasterModel
     {
         ScenarioText = new List<string>();
         Scenario = 1;
+        Result = "";
     }
 
 
@@ -71,12 +72,6 @@ class KeyboardMasterModel
        
         return sb.ToString();
 
-    }
-
-    private string GenerateRandomLetters()
-    {
-
-        return "";
     }
 
     public bool CheckAnswer(string answer)

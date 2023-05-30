@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="Keyboard Master"
         Height="540"
-        Width="740"
+        Width="840"
         WindowStyle="None"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
@@ -187,14 +187,17 @@
                 </Button.Template>
             </Button>
 
-            <ListBox 
-                ItemsPanel="{Binding}"
+            <ComboBox 
+                ItemsSource="{Binding ChooseScenario}"            
                 Grid.Row="3"
-                Background="Transparent"
-                BorderBrush="Transparent"
                 Foreground="#FF060A48">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Scenario}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
 
-            </ListBox>
+            </ComboBox>
                     
             <TextBlock  
                 Text="{Binding Scenario}"
@@ -229,7 +232,7 @@
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 FontSize="15"
-                Text="{Binding}"
+                Text="{Binding LineTwo}"
                 Foreground="#FF060A48"
                 Grid.Row ="7">
             </TextBlock>
@@ -248,7 +251,7 @@
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 FontSize="15"
-                Text="{Binding}"
+                Text="{Binding LineThree}"
                 Foreground="#FF060A48"
                 Grid.Row ="9">
             </TextBlock>
