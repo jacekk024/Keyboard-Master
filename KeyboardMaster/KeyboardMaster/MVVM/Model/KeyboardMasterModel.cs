@@ -12,11 +12,13 @@ class KeyboardMasterModel
     public List<string>? ScenarioText { get; set; }
     public int Scenario { get; set; }
     public string Result { get; set; }
+    private Stopwatch Timer { get; set; }
     public int Score { get; set; }
     public string Answer { get; set; }  
     public KeyboardMasterModel()
     {
         ScenarioText = new List<string>();
+        Timer = new Stopwatch();
         Scenario = 1;
         Result = "";
     }
@@ -80,10 +82,4 @@ class KeyboardMasterModel
     {
         return 1;
     }
-
-    public void ResetScore()
-    {
-      
-    }
-
 }

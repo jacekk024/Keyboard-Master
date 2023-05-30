@@ -22,7 +22,7 @@ namespace KeyboardMaster.MVVM.ViewModel
         private string ScenarioText { get; set; }
 
         private string scenarioDesc { get;set; }
-
+        private bool isRunning { get;set; }
         private string lineOne { get; set; }
         private string lineTwo { get; set; }
         private string lineThree { get; set; }
@@ -46,7 +46,7 @@ namespace KeyboardMaster.MVVM.ViewModel
 
         public string Answer 
         {
-            get => Model?.Answer; 
+            get => Model.Answer; 
             set
             {
                 OnPropertyChanged(nameof(Answer));
@@ -115,7 +115,8 @@ namespace KeyboardMaster.MVVM.ViewModel
         {
             Timer?.Start();
             Task.Run(() => UpdateScenario());
-        }
+            isRunning = true;
+        } 
 
         private void InitializeScenario() 
         {
@@ -125,8 +126,6 @@ namespace KeyboardMaster.MVVM.ViewModel
                 ChooseScenario.Add(i.ToString());
             }
         }
-
-
         private void UpdateScenario() 
         {
             int scenario = int.Parse(Scenario);
