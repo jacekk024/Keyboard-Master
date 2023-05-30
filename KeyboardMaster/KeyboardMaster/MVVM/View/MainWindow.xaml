@@ -207,7 +207,7 @@
             <TextBlock
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
-                FontSize="15"
+                FontSize="20"
                 Text="{Binding LineOne}"
                 Foreground="#FF060A48"
                 Grid.Row ="5"
@@ -227,7 +227,8 @@
             <TextBlock
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
-                FontSize="15"
+                FontSize="20"
+                FontStretch="Expanded"
                 Text="{Binding LineTwo}"
                 Foreground="#FF060A48"
                 Grid.Row ="7">
@@ -246,7 +247,7 @@
             <TextBlock
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
-                FontSize="15"
+                FontSize="20"
                 Text="{Binding LineThree}"
                 Foreground="#FF060A48"
                 Grid.Row ="9">

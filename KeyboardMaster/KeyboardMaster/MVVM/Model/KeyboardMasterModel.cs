@@ -38,22 +38,22 @@ class KeyboardMasterModel
                 chars = "asdf";
             break;
             case 3:
-                chars = "letters j k l i";
+                chars = "jkli";
                 break;
             case 4:
-                chars = "letters a s d f e";
+                chars = "asdfe";
                 break;
             case 5:
-                chars = "letters j k l u i";
+                chars = "jklui";
                 break;
             case 6:
-                chars = "letters s d f e u j k l";
+                chars = "sdfeujkl";
                 break;
             case 7:
-                chars = "letters a s d f e r";
+                chars = "asdfer";
                 break;
             case 8:
-                chars = "letters j k l u i o";
+                chars = "jkluio";
                 break;
 
             default:
