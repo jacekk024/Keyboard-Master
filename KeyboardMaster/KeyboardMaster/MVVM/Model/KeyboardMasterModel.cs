@@ -11,10 +11,8 @@ class KeyboardMasterModel
 {
     public List<string>? ScenarioText { get; set; }
     public int Scenario { get; set; }
-    
     public string Result { get; set; }
     public int Score { get; set; }
-
     public string Answer { get; set; }  
     public KeyboardMasterModel()
     {
@@ -68,10 +66,8 @@ class KeyboardMasterModel
             sb.Append(new string(Enumerable.Repeat(chars, 4)
             .Select(s => s[rnd.Next(s.Length)]).ToArray()) + " ");
             
-        }
-       
+        }   
         return sb.ToString();
-
     }
 
     public bool CheckAnswer(string answer)

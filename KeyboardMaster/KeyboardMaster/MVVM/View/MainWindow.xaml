@@ -188,19 +188,15 @@
             </Button>
 
             <ComboBox 
-                ItemsSource="{Binding ChooseScenario}"            
+                ItemsSource="{Binding ChooseScenario}"  
+                SelectedItem="{Binding Scenario, Mode=TwoWay}"
                 Grid.Row="3"
                 Foreground="#FF060A48">
-                <ComboBox.ItemTemplate>
-                    <DataTemplate>
-                        <TextBlock Text="{Binding Scenario}"/>
-                    </DataTemplate>
-                </ComboBox.ItemTemplate>
 
             </ComboBox>
                     
             <TextBlock  
-                Text="{Binding Scenario}"
+                Text="{Binding ScenarioDescription}"
                 Grid.Row="4"
                 HorizontalAlignment="Center"
                 FontSize="15"

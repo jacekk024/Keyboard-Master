@@ -21,6 +21,7 @@ namespace KeyboardMaster.MVVM.ViewModel
         private int ScenarioNumber { get; set; }
         private string ScenarioText { get; set; }
 
+        private string scenarioDesc { get;set; }
 
         private string lineOne { get; set; }
         private string lineTwo { get; set; }
@@ -36,10 +37,9 @@ namespace KeyboardMaster.MVVM.ViewModel
             lineOne = "";
             lineTwo = "";
             lineThree = "";
+            scenarioDesc = "";
             ScenarioNumber = 8;
-
             StartScenarioCommand = new RelayCommand(StartScenario);
-
         }
 
         public ICommand StartScenarioCommand { get; }
@@ -69,6 +69,15 @@ namespace KeyboardMaster.MVVM.ViewModel
             {
                 ScenarioText = value;
                 OnPropertyChanged(nameof(Scenario));
+            }
+        }
+        public string ScenarioDescription
+        {
+            get => scenarioDesc;
+            set
+            {
+                scenarioDesc = value;
+                OnPropertyChanged(nameof(ScenarioDescription));
             }
         }
 
@@ -157,6 +166,7 @@ namespace KeyboardMaster.MVVM.ViewModel
                     
                 break;
             }
+            ScenarioDescription = Scenario;
             LineOne = Model.GenerateScenario(scenario);
             LineTwo = Model.GenerateScenario(scenario);
             LineThree = Model.GenerateScenario(scenario);
