@@ -14,7 +14,6 @@ namespace KeyboardMaster.MVVM.ViewModel
 {
     class MainViewModel : BaseViewModel
     {
-
         private KeyboardMasterModel? Model { get; set; }
         private Stopwatch? Timer { get; set; }
         public ObservableCollection<string> ChooseScenario { get; set; }
@@ -26,7 +25,6 @@ namespace KeyboardMaster.MVVM.ViewModel
         private string lineOne { get; set; }
         private string lineTwo { get; set; }
         private string lineThree { get; set; }
-
 
         public MainViewModel() 
         {
@@ -53,12 +51,28 @@ namespace KeyboardMaster.MVVM.ViewModel
             }
         }
 
-        public string Result
+        public string ResultOne
         {
             get => Model.Result;
             set
             {
-                OnPropertyChanged(nameof(Result));
+                OnPropertyChanged(nameof(ResultOne));
+            }
+        }
+        public string ResultTwo
+        {
+            get => Model.Result;
+            set
+            {
+                OnPropertyChanged(nameof(ResultTwo));
+            }
+        }
+        public string ResultThree
+        {
+            get => Model.Result;
+            set
+            {
+                OnPropertyChanged(nameof(ResultThree));
             }
         }
 
@@ -116,7 +130,21 @@ namespace KeyboardMaster.MVVM.ViewModel
             Timer?.Start();
             Task.Run(() => UpdateScenario());
             isRunning = true;
+            //Task.Run(() => CheckResult());
         } 
+
+        private void CheckResult() 
+        {
+            while (isRunning) 
+            {
+                
+            
+            
+            }
+            Timer?.Stop();
+
+        }
+
 
         private void InitializeScenario() 
         {
