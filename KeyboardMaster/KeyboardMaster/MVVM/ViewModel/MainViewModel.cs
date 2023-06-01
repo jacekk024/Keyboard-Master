@@ -42,39 +42,42 @@ namespace KeyboardMaster.MVVM.ViewModel
 
         public ICommand StartScenarioCommand { get; }
 
-        public string Answer 
+        public string AnswerOne
         {
             get => Model.Answer; 
             set
             {
-                OnPropertyChanged(nameof(Answer));
+                OnPropertyChanged(nameof(AnswerOne));
             }
         }
 
-        public string ResultOne
+        public string AnswerTwo
+        {
+            get => Model.Answer;
+            set
+            {
+                OnPropertyChanged(nameof(AnswerTwo));
+            }
+        }
+
+        public string AnswerThree
+        {
+            get => Model.Answer;
+            set
+            {
+                OnPropertyChanged(nameof(AnswerThree));
+            }
+        }
+
+        public string Result
         {
             get => Model.Result;
             set
             {
-                OnPropertyChanged(nameof(ResultOne));
+                OnPropertyChanged(nameof(Result));
             }
         }
-        public string ResultTwo
-        {
-            get => Model.Result;
-            set
-            {
-                OnPropertyChanged(nameof(ResultTwo));
-            }
-        }
-        public string ResultThree
-        {
-            get => Model.Result;
-            set
-            {
-                OnPropertyChanged(nameof(ResultThree));
-            }
-        }
+
 
         public string Scenario
         {
@@ -124,7 +127,6 @@ namespace KeyboardMaster.MVVM.ViewModel
                 OnPropertyChanged(nameof(LineThree));
             }
         }
-
         public void StartScenario() 
         {
             Timer?.Start();
@@ -144,8 +146,6 @@ namespace KeyboardMaster.MVVM.ViewModel
             Timer?.Stop();
 
         }
-
-
         private void InitializeScenario() 
         {
             ChooseScenario = new ObservableCollection<string>();

@@ -146,8 +146,8 @@
                 Text="KEYBOARD MASTER"
                 Grid.Row="1"
                 HorizontalAlignment="Center"
-                FontSize="20"
-                FontWeight="ExtraLight"
+                FontSize="22"
+                FontWeight="Normal"
                 Foreground="#FF060A48"    
             />
 
@@ -160,7 +160,7 @@
                 FontSize="12"
                 Command="{Binding StartScenarioCommand}"       
                 Grid.Row="2">
-                
+
                 <Button.Style>
                     <Style TargetType="Button">
                         <Setter Property="Background" Value="#FF6D5EC8"/>
@@ -187,11 +187,18 @@
                 </Button.Template>
             </Button>
 
-            <ComboBox 
+            <ComboBox  
                 ItemsSource="{Binding ChooseScenario}"  
                 SelectedItem="{Binding Scenario, Mode=TwoWay}"
                 Grid.Row="3"
-                Foreground="#FF060A48">
+                Foreground="#FF060A48"
+                Background="Transparent"
+                Width="80"
+                Height="20"
+                
+                
+                
+                >
 
             </ComboBox>
                     
@@ -210,17 +217,17 @@
                 FontSize="20"
                 Text="{Binding LineOne}"
                 Foreground="#FF060A48"
-                Grid.Row ="5"
-                >
+                Grid.Row ="5">
             </TextBlock>
 
             <TextBox
                 VerticalContentAlignment="Center"
                 HorizontalContentAlignment="Center"
                 FontSize="15"
+                Text = "{Binding AnswerOne}"
                 Background="Transparent"
                 BorderBrush="Transparent"
-                Foreground="Black"
+                Foreground="#FF060A48"
                 Grid.Row ="6">
             </TextBox>
 
@@ -238,9 +245,10 @@
                 VerticalContentAlignment="Center"
                 HorizontalContentAlignment="Center"
                 FontSize="15"
+                Text = "{Binding AnswerTwo}"
                 Background="Transparent"
                 BorderBrush="Transparent"
-                Foreground="Black"
+                Foreground="#FF060A48"
                 Grid.Row ="8">
             </TextBox>
 
@@ -257,9 +265,10 @@
                 VerticalContentAlignment="Center"
                 HorizontalContentAlignment="Center"
                 FontSize="15"
+                Text = "{Binding AnswerThree}"
                 Background="Transparent"
                 BorderBrush="Transparent"
-                Foreground="Black"
+                Foreground="#FF060A48"
                 Grid.Row ="10">
             </TextBox>
 
@@ -267,10 +276,21 @@
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 FontSize="15"
-                Text="{Binding Result}"
+                Text="Result"
                 Foreground="#FF060A48"
                 Grid.Row ="11">
             </TextBlock>
+
+
+            <TextBlock
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                FontSize="15"
+                Text="Result"
+                Foreground="#FF060A48"
+                Grid.Row ="12">
+            </TextBlock>
+
         </Grid>
     </Border>
 </Window>
