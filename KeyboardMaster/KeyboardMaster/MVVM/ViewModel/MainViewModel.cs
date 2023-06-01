@@ -26,6 +26,10 @@ namespace KeyboardMaster.MVVM.ViewModel
         private string lineTwo { get; set; }
         private string lineThree { get; set; }
 
+        private string answerOne { get; set; }
+        private string answerTwo { get; set; }
+        private string answerThree { get; set; }
+
         public MainViewModel() 
         {
             Model = new KeyboardMasterModel();
@@ -34,6 +38,9 @@ namespace KeyboardMaster.MVVM.ViewModel
             lineOne = "";
             lineTwo = "";
             lineThree = "";
+            answerOne = "";
+            answerTwo = "";
+            answerThree = "";
             scenarioDesc = "";
             ScenarioNumber = 8;
             StartScenarioCommand = new RelayCommand(StartScenario);
@@ -44,7 +51,7 @@ namespace KeyboardMaster.MVVM.ViewModel
 
         public string AnswerOne
         {
-            get => Model.Answer; 
+            get => answerOne; 
             set
             {
                 OnPropertyChanged(nameof(AnswerOne));
@@ -53,7 +60,7 @@ namespace KeyboardMaster.MVVM.ViewModel
 
         public string AnswerTwo
         {
-            get => Model.Answer;
+            get => answerTwo;
             set
             {
                 OnPropertyChanged(nameof(AnswerTwo));
@@ -62,7 +69,7 @@ namespace KeyboardMaster.MVVM.ViewModel
 
         public string AnswerThree
         {
-            get => Model.Answer;
+            get => answerThree;
             set
             {
                 OnPropertyChanged(nameof(AnswerThree));
@@ -77,7 +84,6 @@ namespace KeyboardMaster.MVVM.ViewModel
                 OnPropertyChanged(nameof(Result));
             }
         }
-
 
         public string Scenario
         {

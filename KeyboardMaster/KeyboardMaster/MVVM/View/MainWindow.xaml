@@ -195,9 +195,6 @@
                 Background="Transparent"
                 Width="80"
                 Height="20"
-                
-                
-                
                 >
 
             </ComboBox>

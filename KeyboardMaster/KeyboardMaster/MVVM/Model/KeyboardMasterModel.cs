@@ -68,7 +68,10 @@ class KeyboardMasterModel
             sb.Append(new string(Enumerable.Repeat(chars, 4)
             .Select(s => s[rnd.Next(s.Length)]).ToArray()) + " ");
             
-        }   
+        }
+
+        ScenarioText?.Add(sb.ToString());
+
         return sb.ToString();
     }
 
