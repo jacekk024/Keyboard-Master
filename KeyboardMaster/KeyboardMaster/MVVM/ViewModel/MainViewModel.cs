@@ -26,9 +26,7 @@ namespace KeyboardMaster.MVVM.ViewModel
         private string lineTwo { get; set; }
         private string lineThree { get; set; }
 
-        private string answerOne { get; set; }
-        private string answerTwo { get; set; }
-        private string answerThree { get; set; }
+
 
         public MainViewModel() 
         {
@@ -38,9 +36,6 @@ namespace KeyboardMaster.MVVM.ViewModel
             lineOne = "";
             lineTwo = "";
             lineThree = "";
-            answerOne = "";
-            answerTwo = "";
-            answerThree = "";
             scenarioDesc = "";
             ScenarioNumber = 8;
             StartScenarioCommand = new RelayCommand(StartScenario);
@@ -51,27 +46,30 @@ namespace KeyboardMaster.MVVM.ViewModel
 
         public string AnswerOne
         {
-            get => answerOne; 
+            get => Model.AnswerOne; 
             set
             {
+                Model.AnswerOne = value;
                 OnPropertyChanged(nameof(AnswerOne));
             }
         }
 
         public string AnswerTwo
         {
-            get => answerTwo;
+            get => Model.AnswerTwo;
             set
             {
+                Model.AnswerTwo = value;
                 OnPropertyChanged(nameof(AnswerTwo));
             }
         }
 
         public string AnswerThree
         {
-            get => answerThree;
+            get => Model.AnswerThree;
             set
             {
+                Model.AnswerThree = value;  
                 OnPropertyChanged(nameof(AnswerThree));
             }
         }
@@ -81,6 +79,7 @@ namespace KeyboardMaster.MVVM.ViewModel
             get => Model.Result;
             set
             {
+                Model.Result = value;
                 OnPropertyChanged(nameof(Result));
             }
         }
@@ -137,20 +136,24 @@ namespace KeyboardMaster.MVVM.ViewModel
         {
             Timer?.Start();
             Task.Run(() => UpdateScenario());
-            isRunning = true;
-            //Task.Run(() => CheckResult());
+            Task.Run(() => CheckResult());
+            Task.Run(() => show());
         } 
+
+        private void show() 
+        {
+            Result = Model.AnswerOne.Length.ToString();
+        }
 
         private void CheckResult() 
         {
-            while (isRunning) 
+            while (true) 
             {
-                
-            
+                if (!Model.CheckAnswer());
+                    break;
             
             }
-            Timer?.Stop();
-
+            Result = "dupa";
         }
         private void InitializeScenario() 
         {

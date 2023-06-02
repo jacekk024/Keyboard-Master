@@ -7,8 +7,8 @@
         xmlns:local="clr-namespace:KeyboardMaster"
         mc:Ignorable="d"
         Title="Keyboard Master"
-        Height="540"
-        Width="840"
+        Height="640"
+        Width="940"
         WindowStyle="None"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
@@ -45,16 +45,16 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="30"/>
                 <RowDefinition Height="30"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
@@ -271,19 +271,9 @@
 
             <TextBlock
                 HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                FontSize="15"
-                Text="Result"
-                Foreground="#FF060A48"
-                Grid.Row ="11">
-            </TextBlock>
-
-
-            <TextBlock
-                HorizontalAlignment="Center"
                 VerticalAlignment="Top"
                 FontSize="15"
-                Text="Result"
+                Text="{Binding Result}"
                 Foreground="#FF060A48"
                 Grid.Row ="12">
             </TextBlock>
