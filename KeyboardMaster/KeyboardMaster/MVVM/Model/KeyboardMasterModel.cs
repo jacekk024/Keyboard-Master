@@ -18,6 +18,11 @@ class KeyboardMasterModel
     public string AnswerTwo { get; set; }
     public string AnswerThree { get; set; }
 
+    public string LineOne { get; set; }
+    public string LineTwo { get; set; }
+    public string LineThree { get; set; }
+
+
     public KeyboardMasterModel()
     {
         ScenarioText = new StringBuilder();
@@ -26,6 +31,11 @@ class KeyboardMasterModel
         AnswerOne = "";
         AnswerTwo = "";
         AnswerThree = "";
+
+        LineOne = "";
+        LineTwo = "";
+        LineThree = "";
+
         Result = "";
     }
 

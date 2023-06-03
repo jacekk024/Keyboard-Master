@@ -17,26 +17,18 @@ namespace KeyboardMaster.MVVM.ViewModel
         private KeyboardMasterModel? Model { get; set; }
         private Stopwatch? Timer { get; set; }
         public ObservableCollection<string> ChooseScenario { get; set; }
-        private int ScenarioNumber { get; set; }
         private string ScenarioText { get; set; }
         private string scenarioDesc { get;set; }
-        private string lineOne { get; set; }
-        private string lineTwo { get; set; }
-        private string lineThree { get; set; }
 
         public MainViewModel() 
         {
             Model = new KeyboardMasterModel();
             Timer = new Stopwatch();
             ScenarioText = "";
-            lineOne = "";
-            lineTwo = "";
-            lineThree = "";
             scenarioDesc = "";
-            ScenarioNumber = 8;
             StartScenarioCommand = new RelayCommand(StartScenario);
             CheckResultCommand = new RelayCommand(CheckResult); 
-            InitializeScenario();
+            InitializeScenario(8);
         }
 
         public ICommand StartScenarioCommand { get; }
@@ -103,30 +95,30 @@ namespace KeyboardMaster.MVVM.ViewModel
 
         public string LineOne
         {
-            get => lineOne;
+            get => Model.LineOne;
             set
             {
-                lineOne = value;
+                Model.LineOne = value;
                 OnPropertyChanged(nameof(LineOne));
             }
         }
 
         public string LineTwo
         {
-            get => lineTwo;
+            get => Model.LineTwo;
             set
             {
-                lineTwo = value;
+                Model.LineTwo = value;
                 OnPropertyChanged(nameof(LineTwo));
             }
         }
 
         public string LineThree
         {
-            get => lineThree;
+            get => Model.LineThree;
             set
             {
-                lineThree = value;
+                Model.LineThree = value;
                 OnPropertyChanged(nameof(LineThree));
             }
         }
@@ -144,10 +136,10 @@ namespace KeyboardMaster.MVVM.ViewModel
             Result = "Time youe complete the task: " + time.ToString() + "sec";
         }
 
-        private void InitializeScenario() 
+        private void InitializeScenario(int scenarios) 
         {
             ChooseScenario = new ObservableCollection<string>();
-            for (int i = 1; i <= ScenarioNumber; i++)
+            for (int i = 1; i <= scenarios; i++)
             {
                 ChooseScenario.Add(i.ToString());
             }
