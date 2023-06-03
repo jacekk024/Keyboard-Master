@@ -89,18 +89,21 @@ class KeyboardMasterModel
 
     public void CheckCorrectAnswers() 
     {
+        Score = 10;
+        //for(int i = 0; i < LineOne.Length; i++)
+        //{
+        //    if (AnswerOne[i].Equals(LineOne[i]))
+        //        Score += 1;
+        //    if (AnswerTwo[i].Equals(LineTwo[i]))
+        //        Score += 1;
+        //    if (AnswerThree[i].Equals(LineThree[i]))
+        //        Score += 1;
+        //}
+        //if (Score == 0)
+        //    Score = 800;
 
-        for(int i = 0; i < LineOne.Length; i++)
-        {
-            if (LineOne[i].Equals(AnswerOne[i]))
-                Score += 1;
-            if (LineTwo[i].Equals(AnswerTwo[i]))
-                Score += 1;
-            if (LineThree[i].Equals(AnswerThree[i]))
-                Score += 1;
-        }
-        
-        Score /= (LineOne.Length*3);
+
+        //Score /= (LineOne.Length*3);
 
     }
 }
