@@ -158,7 +158,45 @@
                 Foreground="#FF060A48" 
                 FontWeight="ExtraLight"
                 FontSize="12"
+                Margin="0,0,150,0"
                 Command="{Binding StartScenarioCommand}"       
+                Grid.Row="2">
+
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#FF6D5EC8"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#FF705AF7"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border 
+                            Width="80"
+                            Height="20" 
+                            CornerRadius="9"
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter 
+                                VerticalAlignment="Center" 
+                                HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Button
+                Width="100"
+                Height="30"
+                Content="Check"
+                Foreground="#FF060A48" 
+                FontWeight="ExtraLight"
+                FontSize="12"
+                Margin="150,0,0,0"
+                Command="{Binding CheckResultCommand}"       
                 Grid.Row="2">
 
                 <Button.Style>

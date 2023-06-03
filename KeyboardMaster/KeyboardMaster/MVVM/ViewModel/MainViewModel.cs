@@ -19,14 +19,10 @@ namespace KeyboardMaster.MVVM.ViewModel
         public ObservableCollection<string> ChooseScenario { get; set; }
         private int ScenarioNumber { get; set; }
         private string ScenarioText { get; set; }
-
         private string scenarioDesc { get;set; }
-        private bool isRunning { get;set; }
         private string lineOne { get; set; }
         private string lineTwo { get; set; }
         private string lineThree { get; set; }
-
-
 
         public MainViewModel() 
         {
@@ -39,10 +35,12 @@ namespace KeyboardMaster.MVVM.ViewModel
             scenarioDesc = "";
             ScenarioNumber = 8;
             StartScenarioCommand = new RelayCommand(StartScenario);
+            CheckResultCommand = new RelayCommand(CheckResult); 
             InitializeScenario();
         }
 
         public ICommand StartScenarioCommand { get; }
+        public ICommand CheckResultCommand { get; }
 
         public string AnswerOne
         {
@@ -134,27 +132,18 @@ namespace KeyboardMaster.MVVM.ViewModel
         }
         public void StartScenario() 
         {
-            Timer?.Start();
+            Result = "";
+            Model.Timer.Start();
             Task.Run(() => UpdateScenario());
-            Task.Run(() => CheckResult());
-            Task.Run(() => show());
         } 
-
-        private void show() 
-        {
-            Result = Model.AnswerOne.Length.ToString();
-        }
 
         private void CheckResult() 
         {
-            while (true) 
-            {
-                if (!Model.CheckAnswer());
-                    break;
-            
-            }
-            Result = "dupa";
+            Model.Timer.Stop();
+            int time = (int)Model.Timer.ElapsedMilliseconds / 1000;
+            Result = "Time youe complete the task: " + time.ToString() + "sec";
         }
+
         private void InitializeScenario() 
         {
             ChooseScenario = new ObservableCollection<string>();
@@ -166,7 +155,6 @@ namespace KeyboardMaster.MVVM.ViewModel
         private void UpdateScenario() 
         {
             int scenario = int.Parse(Scenario);
-            
             switch(scenario)              
             {
                 case 1:

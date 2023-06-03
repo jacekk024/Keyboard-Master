@@ -10,12 +10,10 @@ namespace KeyboardMaster.MVVM.Model;
 class KeyboardMasterModel
 {
     StringBuilder? ScenarioText { get; set; }
-    public List<string>? AnswerText { get; set; }
-
     public int Scenario { get; set; }
     public string Result { get; set; }
-    private Stopwatch Timer { get; set; }
-    public int Score { get; set; }
+    public Stopwatch Timer { get; set; }
+    public  int Score { get; set; }
     public string AnswerOne { get; set; }
     public string AnswerTwo { get; set; }
     public string AnswerThree { get; set; }
@@ -24,7 +22,6 @@ class KeyboardMasterModel
     {
         ScenarioText = new StringBuilder();
         Timer = new Stopwatch();
-        Timer.Start();
         Scenario = 1;
         AnswerOne = "";
         AnswerTwo = "";
@@ -78,20 +75,5 @@ class KeyboardMasterModel
         ScenarioText?.Append(sb.ToString());
 
         return sb.ToString();
-    }
-
-    public bool CheckAnswer()
-    {
-        StringBuilder stringBuilder = new();
-        stringBuilder.Append(AnswerOne + AnswerTwo + AnswerThree);
-
-        if (stringBuilder.Length == ScenarioText.Length) 
-        {
-            Timer.Stop();
-            Score = (int)Timer.ElapsedMilliseconds;
-            return false;
-        }
-        else
-            return true;
     }
 }
