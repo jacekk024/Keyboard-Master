@@ -20,6 +20,84 @@
         <vm:MainViewModel/>
     </Window.DataContext>
 
+    <Window.Resources>
+        <Style x:Key="CustomComboBoxStyle" TargetType="ComboBox">
+            <Setter Property="Foreground" Value="#FF060A48"/>
+            <!-- Change text color -->
+            <Setter Property="SnapsToDevicePixels" Value="True"/>
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ComboBox">
+                        <Grid>
+                            <ToggleButton
+                            Name="ToggleButton"
+                            BorderBrush="#FF705AF7"
+                            BorderThickness="1"
+                            Background="#FF6D5EC8"                  
+                            Foreground="{TemplateBinding Foreground}"
+                            Grid.Column="2"
+                            Focusable="False"
+                            IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
+                            ClickMode="Press">
+                                <ToggleButton.Template>
+                                    <ControlTemplate TargetType="ToggleButton">
+                                        <Border
+                                        x:Name="Border"
+                                        Background="{TemplateBinding Background}"
+                                        BorderBrush="{TemplateBinding BorderBrush}"
+                                        BorderThickness="{TemplateBinding BorderThickness}"
+                                        CornerRadius="5">
+                                        </Border>
+                                    </ControlTemplate>
+                                </ToggleButton.Template>
+
+                            </ToggleButton>
+                            <ContentPresenter
+                            Name="ContentSite"
+                            IsHitTestVisible="False"
+                            Content="{TemplateBinding SelectionBoxItem}"
+                            ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
+                            ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"
+                            Margin="3,3,23,3"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Left">
+                            </ContentPresenter>
+                            <Popup
+                            Name="Popup"
+                            AllowsTransparency="True"
+                            IsOpen="{TemplateBinding IsDropDownOpen}"
+                            Placement="Bottom"
+                            Focusable="False"
+                            PopupAnimation="Slide">
+                                <Grid
+                                Name="DropDown"
+                                SnapsToDevicePixels="True"
+                                MinWidth="{TemplateBinding ActualWidth}"
+                                MaxHeight="{TemplateBinding MaxDropDownHeight}">
+                                    <Border
+                                    CornerRadius="10"    
+                                    x:Name="DropDownBorder"
+                                    Background="#FF6D5EC8" 
+                                    BorderThickness="1"
+                                    BorderBrush="#FF6D5EC8">
+                                        <ScrollViewer
+                                        Margin="4,6,4,6"
+                                        SnapsToDevicePixels="True">
+                                            <ItemsPresenter
+                                            KeyboardNavigation.DirectionalNavigation="Contained"
+                                            SnapsToDevicePixels="True"/>
+                                        </ScrollViewer>
+                                    </Border>
+                                </Grid>
+                            </Popup>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
     <Border 
             CornerRadius="50"
             BorderThickness="5">
@@ -226,10 +304,10 @@
             </Button>
 
             <ComboBox  
+                Style="{StaticResource CustomComboBoxStyle}"
                 ItemsSource="{Binding ChooseScenario}"  
                 SelectedItem="{Binding Scenario, Mode=TwoWay}"
                 Grid.Row="3"
-                Foreground="#FF060A48"
                 Background="Transparent"
                 Width="80"
                 Height="20"
