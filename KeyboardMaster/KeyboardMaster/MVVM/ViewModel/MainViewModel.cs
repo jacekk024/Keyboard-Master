@@ -131,11 +131,12 @@ namespace KeyboardMaster.MVVM.ViewModel
 
         private void CheckResult() 
         {
+            Result = "";
             Model.Timer.Stop();
             int time = (int)Model.Timer.ElapsedMilliseconds / 1000;
             Task.Run(()=>Model.CheckCorrectAnswers());
 
-            Result = "Score: " +Model.Result + " Time: " + time.ToString() + "sec";
+            Result = "Score: " +Model.Result.ToString() + " Time: " + time.ToString() + "sec";
         }
 
         private void InitializeScenario(int scenarios) 
