@@ -86,4 +86,21 @@ class KeyboardMasterModel
 
         return sb.ToString();
     }
+
+    public void CheckCorrectAnswers() 
+    {
+
+        for(int i = 0; i < LineOne.Length; i++)
+        {
+            if (LineOne[i].Equals(AnswerOne[i]))
+                Score += 1;
+            if (LineTwo[i].Equals(AnswerTwo[i]))
+                Score += 1;
+            if (LineThree[i].Equals(AnswerThree[i]))
+                Score += 1;
+        }
+        
+        Score /= (LineOne.Length*3);
+
+    }
 }

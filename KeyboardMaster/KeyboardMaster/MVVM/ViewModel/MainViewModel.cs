@@ -133,7 +133,9 @@ namespace KeyboardMaster.MVVM.ViewModel
         {
             Model.Timer.Stop();
             int time = (int)Model.Timer.ElapsedMilliseconds / 1000;
-            Result = "Time youe complete the task: " + time.ToString() + "sec";
+            Task.Run(()=>Model.CheckCorrectAnswers());
+
+            Result = "Score: " +Model.Result + " Time: " + time.ToString() + "sec";
         }
 
         private void InitializeScenario(int scenarios) 
