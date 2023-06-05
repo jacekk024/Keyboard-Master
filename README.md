@@ -23,14 +23,16 @@
 * MVVM
 
 ## Implementation Details
-    Keyboard Master follows the MVVM (Model-View-ViewModel) architectural pattern to separate concerns and promote maintainability and testability. Here's a breakdown of the project structure:
+Keyboard Master follows the MVVM (Model-View-ViewModel) architectural
+pattern to separate concerns and promote maintainability and testability.
+Here's a breakdown of the project structure:
 
-    Models: This layer represents the data model and encapsulates the business logic.
-    It includes classes such as Exercise, User, and PerformanceData for storing and manipulating data.
+    Models: 
 
-    Views: This layer handles the visual representation of the application. It includes XAML files that define the UI components, layouts, and styles. Views are responsible for binding to the ViewModel layer.
+    Views: 
 
-    ViewModels: This layer acts as the intermediary between the Models and Views. It contains classes that expose properties and commands to the Views, handle user interactions, and update the Models accordingly. It also implements data bindings to facilitate communication between the Views and Models. 
+    ViewModels: 
+
 ## Results
 
 ### Program Start 
