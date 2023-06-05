@@ -10,9 +10,8 @@
 
 ## Project Description
     Keyboard Master is a desktop application designed to help users improve their typing speed and accuracy.
-    It provides a user-friendly interface where users can practice typing
-    various exercises and track their progress over time.
-    The application is built using C# and WPF,
+    It provides a user-friendly interface where users can practice typing various exercises and track
+    their progress over time. The application is built using C# and WPF, 
     providing a rich and interactive experience.
 ## Tools
 * Visual Studio 
