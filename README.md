@@ -25,8 +25,8 @@
 ## Results
 
 ### Program Start 
-<img src="https://github.com/jacekk024/Keyboard-Master/assets/45696277/fd0a0370-a5d2-4f2d-9b0b-f668657bee4f" alt="Start" width="400" height = "700"/>
+<img src="https://github.com/jacekk024/Keyboard-Master/assets/45696277/fd0a0370-a5d2-4f2d-9b0b-f668657bee4f" alt="Start"/>
 
 ### Test Result
-<img src="https://github.com/jacekk024/Keyboard-Master/assets/45696277/ed0f695b-965e-4bd5-bbca-46e815952fd1" alt="Start" width="400" height = "700"/>
+<img src="https://github.com/jacekk024/Keyboard-Master/assets/45696277/ed0f695b-965e-4bd5-bbca-46e815952fd1" alt="Test" />
 
