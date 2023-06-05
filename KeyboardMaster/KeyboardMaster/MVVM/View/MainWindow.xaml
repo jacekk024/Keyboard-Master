@@ -389,7 +389,7 @@
             <TextBlock
                 HorizontalAlignment="Center"
                 VerticalAlignment="Top"
-                FontSize="20"
+                FontSize="35"
                 Text="{Binding Result}"
                 Foreground="#FF060A48"
                 Grid.Row ="12">
