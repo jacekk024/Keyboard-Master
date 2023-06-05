@@ -309,7 +309,6 @@
                 ItemsSource="{Binding ChooseScenario}"  
                 SelectedItem="{Binding Scenario, Mode=TwoWay}"
                 Grid.Row="3"
-                Background="Transparent"
                 Width="80"
                 Height="20"
                 >
@@ -328,7 +327,7 @@
             <TextBlock
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
-                FontSize="20"
+                FontSize="20"               
                 Text="{Binding LineOne}"
                 Foreground="#FF060A48"
                 Grid.Row ="5">
@@ -340,7 +339,7 @@
                 FontSize="20"
                 Text = "{Binding AnswerOne}"
                 Background="Transparent"
-                BorderBrush="Transparent"
+                BorderBrush="#462AD8"
                 Foreground="#FF060A48"
                 Grid.Row ="6">
             </TextBox>
@@ -361,7 +360,7 @@
                 FontSize="20"
                 Text = "{Binding AnswerTwo}"
                 Background="Transparent"
-                BorderBrush="Transparent"
+                BorderBrush="#462AD8"
                 Foreground="#FF060A48"
                 Grid.Row ="8">
             </TextBox>
@@ -382,7 +381,7 @@
                 FontSize="20"
                 Text = "{Binding AnswerThree}"
                 Background="Transparent"
-                BorderBrush="Transparent"
+                BorderBrush="#462AD8"
                 Foreground="#FF060A48"
                 Grid.Row ="10">
             </TextBox>
