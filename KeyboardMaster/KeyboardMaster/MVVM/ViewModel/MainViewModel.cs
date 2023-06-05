@@ -137,7 +137,6 @@ namespace KeyboardMaster.MVVM.ViewModel
             Model.Timer.Stop();
             int time = (int)Model.Timer.ElapsedMilliseconds / 1000;
             await Task.Run(() => Model.CheckCorrectAnswers());
-
             Result = "Score: " + Model.Score.ToString()+"%"+ " Time: " + time.ToString() + "sec";
         }
 
