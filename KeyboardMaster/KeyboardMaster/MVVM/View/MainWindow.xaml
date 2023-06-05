@@ -358,7 +358,7 @@
             <TextBox
                 VerticalContentAlignment="Center"
                 HorizontalContentAlignment="Center"
-                FontSize="15"
+                FontSize="20"
                 Text = "{Binding AnswerTwo}"
                 Background="Transparent"
                 BorderBrush="Transparent"
@@ -378,7 +378,7 @@
             <TextBox
                 VerticalContentAlignment="Center"
                 HorizontalContentAlignment="Center"
-                FontSize="15"
+                FontSize="20"
                 Text = "{Binding AnswerThree}"
                 Background="Transparent"
                 BorderBrush="Transparent"
@@ -389,7 +389,7 @@
             <TextBlock
                 HorizontalAlignment="Center"
                 VerticalAlignment="Top"
-                FontSize="15"
+                FontSize="20"
                 Text="{Binding Result}"
                 Foreground="#FF060A48"
                 Grid.Row ="12">

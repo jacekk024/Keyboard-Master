@@ -14,7 +14,7 @@ class KeyboardMasterModel
     public int Scenario { get; set; }
     public string Result { get; set; }
     public Stopwatch Timer { get; set; }
-    public  int Score { get; set; }
+    public double Score { get; set; }
     public string AnswerOne { get; set; }
     public string AnswerTwo { get; set; }
     public string AnswerThree { get; set; }
@@ -90,15 +90,25 @@ class KeyboardMasterModel
     }
 
     public void CheckCorrectAnswers() 
-    {        
-        for (int i = 0; i < LineOne.Length; i++)
+    {
+        for (int i = 0; i < AnswerOne.Length; i++)
         {
-            if (LineOne[i].Equals(AnswerOne[i]))
+            if (AnswerOne[i].Equals(LineOne[i]))
                 Score += 1;
-            //if (AnswerTwo[i].Equals(LineTwo[i]))
-            //    Score += 1;
-            //if (AnswerThree[i].Equals(LineThree[i]))
-            //    Score += 1;
         }
+        for (int i = 0; i < AnswerTwo.Length; i++)
+        {
+            if (AnswerTwo[i].Equals(LineTwo[i]))
+                Score += 1;
+        }
+        for (int i = 0; i < AnswerThree.Length; i++)
+        {
+            if (AnswerThree[i].Equals(LineThree[i]))
+                Score += 1;           
+        }
+
+        // value in percent
+        Score /= (3* LineOne.Length);
+        Score *= 100;
     }
 }

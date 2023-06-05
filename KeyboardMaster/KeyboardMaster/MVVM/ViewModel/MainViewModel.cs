@@ -130,14 +130,15 @@ namespace KeyboardMaster.MVVM.ViewModel
             Task.Run(() => UpdateScenario());
         } 
 
-        private void CheckResult() 
+        private async void CheckResult() 
         {
             Result = "";
+            Model.Score = 0;
             Model.Timer.Stop();
             int time = (int)Model.Timer.ElapsedMilliseconds / 1000;
-            
+            await Task.Run(() => Model.CheckCorrectAnswers());
 
-            Result = "Score: " + Model.Score.ToString() + " Time: " + time.ToString() + "sec";
+            Result = "Score: " + Model.Score.ToString()+"%"+ " Time: " + time.ToString() + "sec";
         }
 
         private void InitializeScenario(int scenarios) 
