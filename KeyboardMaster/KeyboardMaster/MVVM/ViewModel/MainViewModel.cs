@@ -125,6 +125,7 @@ namespace KeyboardMaster.MVVM.ViewModel
         public void StartScenario() 
         {
             Result = "";
+            Model.Score = 0;
             Model.Timer.Start();
             Task.Run(() => UpdateScenario());
         } 
@@ -134,7 +135,7 @@ namespace KeyboardMaster.MVVM.ViewModel
             Result = "";
             Model.Timer.Stop();
             int time = (int)Model.Timer.ElapsedMilliseconds / 1000;
-            Task.Run(()=>Model.CheckCorrectAnswers());
+            
 
             Result = "Score: " + Model.Score.ToString() + " Time: " + time.ToString() + "sec";
         }

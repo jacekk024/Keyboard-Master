@@ -337,7 +337,7 @@
             <TextBox
                 VerticalContentAlignment="Center"
                 HorizontalContentAlignment="Center"
-                FontSize="15"
+                FontSize="20"
                 Text = "{Binding AnswerOne}"
                 Background="Transparent"
                 BorderBrush="Transparent"
