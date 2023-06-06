@@ -11,14 +11,17 @@ namespace KeyboardMaster.MVVM.Model;
 class KeyboardMasterModel
 {
     StringBuilder? ScenarioText { get; set; }
-    public int Scenario { get; set; }
+    //public int Scenario { get; set; }
     public string Result { get; set; }
     public Stopwatch Timer { get; set; }
+
+    public List<string> Answers { get; set; }
     public double Score { get; set; }
     public string AnswerOne { get; set; }
     public string AnswerTwo { get; set; }
     public string AnswerThree { get; set; }
 
+    public List<string> Texts {get; set; }
     public string LineOne { get; set; }
     public string LineTwo { get; set; }
     public string LineThree { get; set; }
@@ -28,7 +31,10 @@ class KeyboardMasterModel
     {
         ScenarioText = new StringBuilder();
         Timer = new Stopwatch();
-        Scenario = 1;
+        Answers = new List<string>();   
+        Texts = new List<string>(); 
+
+        //Scenario = 1;
         AnswerOne = "";
         AnswerTwo = "";
         AnswerThree = "";
@@ -84,7 +90,7 @@ class KeyboardMasterModel
             .Select(s => s[rnd.Next(s.Length)]).ToArray()) + " ");       
         }
 
-        ScenarioText?.Append(sb.ToString());
+        ScenarioText?.Append(sb);
 
         return sb.ToString();
     }

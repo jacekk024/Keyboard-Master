@@ -15,17 +15,15 @@ namespace KeyboardMaster.MVVM.ViewModel
     class MainViewModel : BaseViewModel
     {
         private KeyboardMasterModel? Model { get; set; }
-        private Stopwatch? Timer { get; set; }
         public ObservableCollection<string> ChooseScenario { get; set; }
         private string ScenarioText { get; set; }
-        private string scenarioDesc { get;set; }
+        private string ScenarioDesc { get;set; }
 
         public MainViewModel() 
         {
             Model = new KeyboardMasterModel();
-            Timer = new Stopwatch();
             ScenarioText = "";
-            scenarioDesc = "";
+            ScenarioDesc = "";
             StartScenarioCommand = new RelayCommand(StartScenario);
             CheckResultCommand = new RelayCommand(CheckResult); 
             InitializeScenario(8);
@@ -85,10 +83,10 @@ namespace KeyboardMaster.MVVM.ViewModel
         }
         public string ScenarioDescription
         {
-            get => scenarioDesc;
+            get => ScenarioDesc;
             set
             {
-                scenarioDesc = value;
+                ScenarioDesc = value;
                 OnPropertyChanged(nameof(ScenarioDescription));
             }
         }
@@ -155,35 +153,35 @@ namespace KeyboardMaster.MVVM.ViewModel
             {
                 case 1:
                     ScenarioDescription = "letters j k l";
-                    Model.Scenario = 1;
+                  //  Model.Scenario = 1;
                     break;
                 case 2:
                     ScenarioDescription = "letters a s d f";
-                    Model.Scenario = 2;
+                  //  Model.Scenario = 2;
                     break;
                 case 3:
                     ScenarioDescription = "letters j k l i";
-                    Model.Scenario = 3;
+                  //  Model.Scenario = 3;
                     break;
                 case 4:
                     ScenarioDescription = "letters a s d f e";
-                    Model.Scenario = 4;
+                  //  Model.Scenario = 4;
                     break;
                 case 5:
                     ScenarioDescription = "letters j k l u i";
-                    Model.Scenario = 5;
+                  //  Model.Scenario = 5;
                     break;
                 case 6:
                     ScenarioDescription = "letters s d f e u j k l";
-                    Model.Scenario = 6;
+                 //   Model.Scenario = 6;
                     break;
                 case 7:
                     ScenarioDescription = "letters a s d f e r";
-                    Model.Scenario = 7;
+                   // Model.Scenario = 7;
                     break;
                 case 8:
                     ScenarioDescription = "letters j k l u i o";
-                    Model.Scenario = 8;
+                   // Model.Scenario = 8;
                     break;
                 default:
                     
