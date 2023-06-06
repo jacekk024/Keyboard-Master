@@ -187,6 +187,7 @@ namespace KeyboardMaster.MVVM.ViewModel
                     
                 break;
             }
+
             LineOne = Model.GenerateScenario(scenario);
             LineTwo = Model.GenerateScenario(scenario);
             LineThree = Model.GenerateScenario(scenario);
