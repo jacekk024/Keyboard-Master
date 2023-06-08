@@ -28,7 +28,6 @@ class KeyboardMasterModel
     {
         Timer = new Stopwatch();
 
-        //Scenario = 1;
         AnswerOne = "";
         AnswerTwo = "";
         AnswerThree = "";
@@ -73,6 +72,15 @@ class KeyboardMasterModel
                 break;
             case 8:
                 chars = "jkluio";
+                break;
+            case 9:
+                chars = "asdfrew";
+                break;
+            case 10:
+                chars = "jkluio";
+                break;
+            case 11:
+                chars = "asdfgwer";
                 break;
             default:
                 return "";

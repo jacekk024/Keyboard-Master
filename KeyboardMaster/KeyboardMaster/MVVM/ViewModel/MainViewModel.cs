@@ -26,7 +26,7 @@ namespace KeyboardMaster.MVVM.ViewModel
             ScenarioDesc = "";
             StartScenarioCommand = new RelayCommand(StartScenario);
             CheckResultCommand = new RelayCommand(CheckResult); 
-            InitializeScenario(8);
+            InitializeScenario(11);
         }
 
         public ICommand StartScenarioCommand { get; }
@@ -153,35 +153,36 @@ namespace KeyboardMaster.MVVM.ViewModel
             {
                 case 1:
                     ScenarioDescription = "letters j k l";
-                  //  Model.Scenario = 1;
                     break;
                 case 2:
                     ScenarioDescription = "letters a s d f";
-                  //  Model.Scenario = 2;
                     break;
                 case 3:
                     ScenarioDescription = "letters j k l i";
-                  //  Model.Scenario = 3;
                     break;
                 case 4:
                     ScenarioDescription = "letters a s d f e";
-                  //  Model.Scenario = 4;
                     break;
                 case 5:
                     ScenarioDescription = "letters j k l u i";
-                  //  Model.Scenario = 5;
                     break;
                 case 6:
                     ScenarioDescription = "letters s d f e u j k l";
-                 //   Model.Scenario = 6;
                     break;
                 case 7:
                     ScenarioDescription = "letters a s d f e r";
-                   // Model.Scenario = 7;
                     break;
                 case 8:
                     ScenarioDescription = "letters j k l u i o";
-                   // Model.Scenario = 8;
+                    break;
+                case 9:
+                    ScenarioDescription = "letters a s d f r e w";
+                    break;
+                case 10:
+                    ScenarioDescription = "letters j k l u i o";
+                    break;
+                case 11:
+                    ScenarioDescription = "letters a s d f g w e r";
                     break;
                 default:
                     
