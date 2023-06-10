@@ -98,18 +98,27 @@ class KeyboardMasterModel
     {
         for (int i = 0; i < AnswerOne.Length; i++)
         {
-            if (AnswerOne[i].Equals(LineOne[i]))
-                Score += 1;
+            if (AnswerOne.Length <= LineOne.Length)
+            {
+                if (AnswerOne[i].Equals(LineOne[i]))
+                    Score += 1;
+            }
         }
         for (int i = 0; i < AnswerTwo.Length; i++)
         {
-            if (AnswerTwo[i].Equals(LineTwo[i]))
-                Score += 1;
+            if (AnswerTwo.Length <= LineTwo.Length)
+            {
+                if (AnswerTwo[i].Equals(LineTwo[i]))
+                    Score += 1;
+            }
         }
         for (int i = 0; i < AnswerThree.Length; i++)
         {
-            if (AnswerThree[i].Equals(LineThree[i]))
-                Score += 1;           
+            if (AnswerThree.Length <= LineThree.Length)
+            {
+                if (AnswerThree[i].Equals(LineThree[i]))
+                    Score += 1;
+            }
         }
 
         // value in percent
