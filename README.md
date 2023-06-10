@@ -1,5 +1,5 @@
 # Keyboard-Master
-
+https://github.com/jacekk024/Keyboard-Master/assets/45696277/85872311-5dc0-4a20-b317-3afea41b5e2c
 ## Table of Contents
 * [Project Description](#general-info)
 * [Tools](#tools)
@@ -33,7 +33,6 @@ Here's a breakdown of the project structure:
     ViewModels: 
 
 ## Results
-
 ### Program Start 
 <img src="https://github.com/jacekk024/Keyboard-Master/assets/45696277/fd0a0370-a5d2-4f2d-9b0b-f668657bee4f" alt="Start"/>
 
