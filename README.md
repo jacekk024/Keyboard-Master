@@ -26,11 +26,16 @@ Keyboard Master follows the MVVM (Model-View-ViewModel) architectural
 pattern to separate concerns and promote maintainability and testability.
 Here's a breakdown of the project structure:
 
-    Models: 
+    Models: KeyboardMasterModel store information about score, time of test pass,
+    scenario, answers. Generate random scenario and check result of test
 
-    Views: 
+    Views: MainWindow store basic view of app.
 
-    ViewModels: 
+    
+    ViewModels: MainViewModel Binds Model an View together. 
+    MainViewModel inherits after BaseViewModel which
+    implements INotifyPropertyChanged interface
+ 
 
 ## Results
 ### Program Start 
