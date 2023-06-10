@@ -123,19 +123,27 @@ namespace KeyboardMaster.MVVM.ViewModel
         public void StartScenario() 
         {
             Result = "";
-            Model.Score = 0;
-            Model.Timer.Start();
+            if (Model != null)
+            {
+                Model.Score = 0;
+                Model.Timer.Start();
+            }
             Task.Run(() => UpdateScenario());
         } 
 
         private async void CheckResult() 
         {
             Result = "";
-            Model.Score = 0;
-            Model.Timer.Stop();
-            int time = (int)Model.Timer.ElapsedMilliseconds / 1000;
-            await Task.Run(() => Model.CheckCorrectAnswers());
-            Result = "Score: " + Model.Score.ToString()+"%"+ " Time: " + time.ToString() + "sec";
+            if (Model != null)
+            {
+                Model.Score = 0;
+                Model.Timer.Stop();
+
+                int time = (int)Model.Timer.ElapsedMilliseconds / 1000;
+
+                await Task.Run(() => Model.CheckCorrectAnswers());
+                Result = "Score: " + Model.Score.ToString() + "%" + " Time: " + time.ToString() + "sec";
+            }
         }
 
         private void InitializeScenario(int scenarios) 
