@@ -193,7 +193,7 @@ namespace KeyboardMaster.MVVM.ViewModel
                     ScenarioDescription = "letters a s d f g w e r";
                     break;
                 default:
-                    
+                //dodac inne scenariusze    
                 break;
             }
             if (Model != null)
