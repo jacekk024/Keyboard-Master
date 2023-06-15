@@ -198,6 +198,9 @@ namespace KeyboardMaster.MVVM.ViewModel
                 case 13:
                     ScenarioDescription = "letters a s d f g w e r t c";
                     break;
+                case 14:
+                    ScenarioDescription = "letters h j k l u i o";
+                    break;
                 default:
                 //dodac inne scenariusze    
                 break;
